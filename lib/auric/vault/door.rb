@@ -53,8 +53,6 @@ module Auric
         end
       end
 
-      private
-
       def build_post_message(method, plaintext_value)
         {
           'params'=>
