@@ -114,7 +114,7 @@ module Auric
         message_body = build_post_message(method, data)
         response = call_auric(method, message_body)
         json_response = JSON.parse(response.parsed_response)
-        if json_response['result']['lastActionSucceeded'] == 1
+        if json_response && json_response['result']['lastActionSucceeded'] == 1
           @success = true
         else
           @success = false
